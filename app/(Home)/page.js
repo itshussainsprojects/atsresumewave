@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import ImgTilt from './ImgTilt';
 import { IoIosRocket } from 'react-icons/io';
 
@@ -21,9 +22,9 @@ const page = () => {
                     </span>
                 </p> */}
                 <p className="mt-3 max-w-screen-sm text-sm text-gray-300 md:mt-10 md:text-lg">
-                    Resumave is an ATS-friendly resume maker designed to simplify the process of creating professional
+                    Resumave is a resume maker designed to simplify the process of creating professional
                     <span className="hidden md:inline">
-                        resumes without the hassle of login or sign-up. With Resumave, users can easily input their
+                        {' '}resumes without the hassle of login or sign-up. With Resumave, users can easily input their
                         details, generate a well-formatted resume, and export it in A4 PDF format.
                     </span>
                 </p>
@@ -33,13 +34,16 @@ const page = () => {
                         <span>Create My Resume</span>
                         <IoIosRocket />
                     </Link>
-
-                  
                 </div>
+
+                <p className="mt-6 text-sm text-gray-400">
+                    Developed by <span className="text-gradient font-semibold">H</span> {' '}
+                    <span className="text-gradient font-semibold">R</span>
+                </p>
             </div>
             <div>
                 <ImgTilt>
-                    <img src="/sample.png" />
+                    <Image src="/sample.png" alt="Resume Sample" width={400} height={550} priority />
                 </ImgTilt>
             </div>
         </div>

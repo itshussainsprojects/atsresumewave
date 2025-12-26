@@ -1,6 +1,16 @@
 import Editor from '@/components/Editor';
-import Preview from '@/components/Resume/Preview';
+import dynamic from 'next/dynamic';
 import Tabs from '@/components/Tabs';
+
+// Dynamically import Preview with SSR disabled to fix usePDF web API issue
+const Preview = dynamic(() => import('@/components/Resume/Preview'), {
+    ssr: false,
+    loading: () => (
+        <div className="flex min-h-96 w-full items-center justify-center md:max-w-[24rem] 2xl:max-w-[28rem]">
+            <div className="animate-spin text-4xl text-primary-400">⏳</div>
+        </div>
+    ),
+});
 
 const page = ({ searchParams: { tab = 'contact' } }) => {
     return (
