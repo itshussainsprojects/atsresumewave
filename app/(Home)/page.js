@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import ImgTilt from './ImgTilt';
-import { FaGithub } from 'react-icons/fa';
 import { IoIosRocket } from 'react-icons/io';
 
 const page = () => {
@@ -35,10 +34,7 @@ const page = () => {
                         <IoIosRocket />
                     </Link>
 
-                    <a href="https://github.com/devXprite/resumave" className="btn w-full md:w-auto">
-                        <span>View Source</span>
-                        <FaGithub />
-                    </a>
+                  
                 </div>
             </div>
             <div>

@@ -3,9 +3,9 @@ export default {
         name: 'Contact',
         name: 'Contact',
         fields: [
-            { name: 'name', label: 'Full Name', placeholder: 'John Doe', required: true },
+            { name: 'name', label: 'Full Name', placeholder: 'Hussain Ali', required: true },
             { name: 'title', label: 'Your Job Title', placeholder: 'Software Developer' },
-            { name: 'email', label: 'Email', type: 'email', placeholder: 'john.doe@example.com' },
+            { name: 'email', label: 'Email', type: 'email', placeholder: 'hussain.a@example.com' },
             { name: 'phone', label: 'Phone', type: 'tel', placeholder: '+1234567890' },
             { name: 'address', label: 'Address', placeholder: '123 Street, City, Country' },
             { name: 'linkedin', label: 'Linked', placeholder: 'linkedin.com/in/johndoe' },

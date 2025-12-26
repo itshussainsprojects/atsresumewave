@@ -6,9 +6,9 @@
 <h3 align="center">An ATS-friendly resume maker</h3>
 
 <p align="center">
- <a href="https://resumave.vercel.app/">View Demo</a>
+ <a href="#">View Demo</a>
     ·
-    <a href="https://github.com/devXprite/resumave/issues/new?assignees=&labels=bug&template=bug_report.md&title=">Report Bug</a>
+    <a href="#">Report Bug</a>
 </p>
 <br/>
 
