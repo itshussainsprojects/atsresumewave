@@ -5,9 +5,6 @@ import Resume from './pdf';
 import { useSelector } from 'react-redux';
 import { CgSpinner } from 'react-icons/cg';
 
-// import 'react-pdf/dist/Page/AnnotationLayer.css';
-// import 'react-pdf/dist/Page/TextLayer.css';
-
 import { usePDF } from '@react-pdf/renderer';
 import { Document, Page, pdfjs } from 'react-pdf';
 import { FaDownload, FaEye } from 'react-icons/fa6';
@@ -31,12 +28,17 @@ const preview = url => {
 const Preview = () => {
     const parentRef = useRef(null);
     const resumeData = useSelector(state => state.resume);
-    const document = <Resume data={resumeData} />;
+    const templateData = useSelector(state => state.template);
+    
+    // Get customization from template state or use defaults
+    const customization = templateData?.customization || {};
+    
+    const document = <Resume data={resumeData} customization={customization} />;
     const [instance, updateInstance] = usePDF({ document });
 
     useEffect(() => {
         if (resumeData.saved) updateInstance(document);
-    }, [resumeData.saved]);
+    }, [resumeData.saved, customization]);
 
     return (
         <div ref={parentRef} className="relative w-full md:max-w-[24rem] 2xl:max-w-[28rem]">
@@ -72,22 +74,5 @@ const Preview = () => {
         </div>
     );
 };
-
-// const Preview = () => {
-//     const resumeData = useSelector(state => state.resume);
-//     const [data, setData] = useState(resumeData);
-
-//     useEffect(() => {
-//         if (resumeData.saved) setData(resumeData);
-//     }, [resumeData.saved]);
-
-//     return (
-//         <div className="hidden h-[40rem] w-[28rem] md:block">
-//             <PDFViewer className="h-full w-full" showToolbar={true}>
-//                 <Resume data={data} />
-//             </PDFViewer>
-//         </div>
-//     );
-// };
 
 export default Preview;

@@ -1,5 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
 import resumeSlice from './slices/resumeSlice';
+import templateSlice from './slices/templateSlice';
 
 const loadState = () => {
     console.info('Loading State from Local Storage...');
@@ -20,6 +21,7 @@ const store = configureStore({
     preloadedState: loadState(),
     reducer: {
         resume: resumeSlice,
+        template: templateSlice,
     },
 });
 

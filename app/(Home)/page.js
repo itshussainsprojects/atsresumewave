@@ -37,13 +37,20 @@ const page = () => {
                 </div>
 
                 <p className="mt-6 text-sm text-gray-400">
-                    Developed by <span className="text-gradient font-semibold">H</span> {' '}
-                    <span className="text-gradient font-semibold">R</span>
+                    Developed with ❤️ by <span className="text-gradient font-semibold">Hussain</span> and{' '}
+                    <span className="text-gradient font-semibold">Rafay</span>
                 </p>
             </div>
-            <div>
+            <div className="w-full max-w-md md:max-w-lg lg:max-w-xl">
                 <ImgTilt>
-                    <Image src="/sample.png" alt="Resume Sample" width={400} height={550} priority />
+                    <Image 
+                        src="/sample.png" 
+                        alt="Resume Sample" 
+                        width={600} 
+                        height={800} 
+                        priority 
+                        className="w-full h-auto rounded-lg shadow-2xl border border-gray-600"
+                    />
                 </ImgTilt>
             </div>
         </div>
