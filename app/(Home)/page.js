@@ -37,9 +37,9 @@ const page = () => {
                 </div>
 
                 <p className="mt-6 text-sm text-gray-400">
-                    Developed with ❤️ by <span className="text-gradient font-semibold">Hussain</span> and{' '}
-                    <span className="text-gradient font-semibold">Rafay</span>
-                </p>
+  Currently in development <span className="text-gradient font-semibold">since 2026</span>
+</p>
+
             </div>
             <div className="w-full max-w-md md:max-w-lg lg:max-w-xl">
                 <ImgTilt>
